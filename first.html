@@ -4,87 +4,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praneeth - My Profile</title>
+    <title>Praneeth | Personal Portfolio</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
+            background: linear-gradient(135deg, #dbeafe, #f5f3ff);
+            color: #1e293b;
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #172554;
+            color: white;
+            padding: 20px;
             text-align: center;
-            margin: 0;
-            padding: 40px 15px;
         }
 
-        .profile {
-            background-color: white;
-            max-width: 450px;
+        header h2 {
+            letter-spacing: 1px;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .avatar {
+            width: 110px;
+            height: 110px;
+            background: #2563eb;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 38px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px #94a3b8;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            max-width: 600px;
             margin: auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px #cccccc;
+            color: #475569;
         }
 
-        h1 {
-            color: #2563eb;
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 20px;
         }
 
-        p {
-            color: #444;
-            line-height: 1.6;
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        h2 {
+            color: #1d4ed8;
+            margin-bottom: 12px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .tag {
-            display: inline-block;
-            background-color: #dbeafe;
-            color: #1d4ed8;
-            padding: 8px 14px;
-            border-radius: 20px;
-            margin: 5px;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
-        button {
-            background-color: #2563eb;
+        .tag:hover {
+            background: #2563eb;
             color: white;
-            border: none;
-            padding: 12px 22px;
-            border-radius: 6px;
-            cursor: pointer;
+            transform: scale(1.05);
         }
 
-        button:hover {
-            background-color: #1e40af;
+        .project {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 11px 22px;
+            border-radius: 8px;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #1e3a8a;
+        }
+
+        footer {
+            background: #172554;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="profile">
+    <header>
+        <h2>Praneeth's Portfolio</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="avatar">P</div>
         <h1>Hi, I'm Praneeth!</h1>
-
         <p>
-            I am a third-year Computer Science student
-            at SR University, Warangal.
+            Computer Science Student | Aspiring Software Engineer |
+            Problem Solving Enthusiast
         </p>
+        <a href="#about" class="button">Explore My Portfolio</a>
+    </section>
 
-        <h3>About Me</h3>
-        <p>
-            I am interested in programming, Data Structures
-            and Algorithms, and software development.
-        </p>
+    <main class="container">
 
-        <h3>My Skills & Interests</h3>
-        <span class="tag">C++</span>
-        <span class="tag">DSA</span>
-        <span class="tag">HTML & CSS</span>
-        <span class="tag">Java</span>
+        <section class="card" id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I am Praneeth, a third-year Computer Science
+                student at SR University, Warangal.
+                I enjoy solving programming problems, learning new
+                technologies, and improving my technical skills.
+            </p>
+            <p>
+                My current focus is on Data Structures and Algorithms,
+                software development, and preparing for technical
+                interviews and internship opportunities.
+            </p>
+        </section>
 
-        <br><br>
+        <section class="card" id="education">
+            <h2>Education</h2>
+            <h3>SR University, Warangal</h3>
+            <p>Bachelor's Degree in Computer Science</p>
+            <p>Current Year: Third Year</p>
+            <p>Focus: Programming, Algorithms and Software Engineering</p>
+        </section>
 
-        <button onclick="alert('Thanks for visiting my profile!')">
-            Say Hello
-        </button>
-    </div>
+        <section class="card" id="skills">
+            <h2>Technical Skills & Interests</h2>
+            <p>Technologies and areas I am learning:</p>
+
+            <div class="skills">
+                <span class="tag">C++</span>
+                <span class="tag">Java</span>
+                <span class="tag">Data Structures</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Problem Solving</span>
+                <span class="tag">Git & GitHub</span>
+            </div>
+        </section>
+
+        <section class="card" id="projects">
+            <h2>My Projects</h2>
+
+            <div class="project">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A responsive personal webpage built using HTML
+                    and CSS to showcase my profile, education and skills.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Student Examination Portal</h3>
+                <p>
+                    An academic project idea for managing exam schedules,
+                    online examinations, answer submissions and results.
+                </p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>My Career Goals</h2>
+            <p>
+                My goal is to become a skilled software engineer,
+                strengthen my problem-solving abilities, build practical
+                projects and secure a good software development role.
+            </p>
+        </section>
+
+        <section class="card" id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                Thank you for visiting my portfolio!
+                I am interested in connecting with fellow learners
+                and exploring software development opportunities.
+            </p>
+
+            <a class="button"
+               href="https://github.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+                Visit GitHub
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Praneeth | Personal Portfolio</p>
+        <p>Built with HTML and CSS</p>
+    </footer>
 
 </body>
 </html>
